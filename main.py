@@ -68,19 +68,15 @@ usedText = TEXTS[number - 1]
 
 usedText = usedText.replace("\n", " ")
 
+
+wordListscarkama = usedText.split()
 wordList = []
 
+for word in wordListscarkama:
+    wordBezCarekATecek = word.strip(".,")
+    if not wordBezCarekATecek == "":
+        wordList.append(wordBezCarekATecek)
 
-currentWord = ''
-for letter in usedText:
-    if not letter == ' ':
-        currentWord += letter
-    else:
-        wordList.append(currentWord)
-        currentWord = ''
-
-# aby tam bylo i poslední slovo
-wordList.append(currentWord) 
 
 print("----------------------------------------")
 
